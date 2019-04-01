@@ -1,7 +1,8 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
-
+const serviceAccount = require('./serviceAccount.json')
 var config = {
+    credential: admin.credential.cert(serviceAccount),
     apiKey: "AIzaSyDHiE-_J792xlawMe6-0TFJ7MIlcaSSJBo",
     authDomain: "mahe-utsav-2019.firebaseapp.com",
     databaseURL: "https://mahe-utsav-2019.firebaseio.com",
